@@ -4,40 +4,40 @@ using UnityEngine;
 
 public class MoveObject9 : MonoBehaviour
 {
-    //float moveSpeed;
-    //[SerializeField] Vector3 moveDirection;
+    [SerializeField] float moveSpeed;
+    [SerializeField] Vector3 moveDirection;
 
-    //totalMoveDistance;
-    //Vector3 startingLocation;
+    float totalMoveDistance;
+    Vector3 startingLocation;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    totalMoveDistance = 10f;
-    //    startingLocation = gameObject.transform.position;
-    //}
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    float distanceTraveled = GetDistanceTraveled();
+    void Start()
+    {
+        totalMoveDistance = 10f;
+        startingLocation = gameObject.transform.position;
+    }
 
-    //    if (distanceTraveled > totalMoveDistance)
-    //    {
-    //        FlipMoveDirection();
-    //        this.enabled = false;
-    //    }
+    void Update()
+    {
+        float distanceTraveled = GetDistanceTraveled();
 
-    //    gameObject.transform.Translate(moveDirection * moveSpeed);
-    //}
+        if (distanceTraveled > totalMoveDistance)
+        {
+            FlipMoveDirection();
+            this.enabled = false;
+        }
 
-    //void FlipMoveDirection()
-    //{
-    //    moveDirection = -moveDirection;
-    //}
+        gameObject.transform.Translate(moveDirection * moveSpeed);
+    }
 
-    //float GetDistanceTraveled()
-    //{
-    //    return Vector3.Distance(gameObject.transform.position, startingLocation);
-    //}
+    void FlipMoveDirection()
+    {
+        moveDirection = -moveDirection;
+        startingLocation = gameObject.transform.position;
+    }
+
+    float GetDistanceTraveled()
+    {
+        return Vector3.Distance(gameObject.transform.position, startingLocation);
+    }
 }
