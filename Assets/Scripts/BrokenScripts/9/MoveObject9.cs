@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MoveObject9 : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed; //need moveSpeed serialized b/c there's no preset speed in code. without speed, no movement   
     [SerializeField] Vector3 moveDirection;
 
-    float totalMoveDistance;
+    float totalMoveDistance; //type of var needs to be declared
     Vector3 startingLocation;
 
 
@@ -33,7 +33,7 @@ public class MoveObject9 : MonoBehaviour
     void FlipMoveDirection()
     {
         moveDirection = -moveDirection;
-        startingLocation = gameObject.transform.position;
+        startingLocation = gameObject.transform.position; //resetting startingLocation so it won't try to calc movement from original position and move too much/little
     }
 
     float GetDistanceTraveled()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveObject6 : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed; //need moveSpeed serialized b/c there's no preset speed in code. without speed, no movement
     [SerializeField] Vector3 moveDirection;
 
     float totalMoveDistance;

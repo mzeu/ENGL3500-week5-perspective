@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementActivator9 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    [SerializeField] GameObject otherObjectToActivate;
+    [SerializeField] GameObject otherObjectToActivate; //needs to be serialized so we can attach both doors to this script on the activator
 
     // Start is called before the first frame update
     void Start()

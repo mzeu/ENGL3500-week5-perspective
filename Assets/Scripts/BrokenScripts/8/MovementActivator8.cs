@@ -18,13 +18,13 @@ public class MovementActivator8 : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // function/method(?) needs to be allcaps >:(
     {
         objectToActivate.GetComponent<MoveObject8>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject8>().enabled = true;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) // typo
     {
         objectToActivate.GetComponent<MoveObject8>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject8>().enabled = true;

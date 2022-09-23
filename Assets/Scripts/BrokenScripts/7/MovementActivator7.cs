@@ -18,12 +18,12 @@ public class MovementActivator7 : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // function/method(?) needs to be allcaps >:(
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) // typo
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;
